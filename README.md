@@ -23,6 +23,10 @@ ScrollScore 鼓組音色。
 
 ScrollScore 目前使用 `roomy` 收音。
 
+`dw-kick-roomy-*` 另外做過小喇叭補強:大鼓的能量幾乎都在低頻,手機/筆電喇叭放不出來,聽起來會比小鼓小聲很多。
+所以在 300Hz 加 +6dB(Q 0.9,補上小喇叭聽得到的「咚」聲)、整體 ×1.5,再用快速限幅器把峰值壓回 0.5,
+力度層之間的差異(v3 比 v4 約 −5 LU、v5 約 +2 LU)維持不變。
+
 ### 銅鈸、Hi-Hat、邊擊(`web/osdk-*.flac`)
 
 原始 WAV 沒有銅鈸,這部分取自 [THE OPEN SOURCE DRUM KIT](https://github.com/crabacus/the-open-source-drumkit)(Real Music Media,公有領域 public domain),
