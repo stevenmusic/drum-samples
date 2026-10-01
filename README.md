@@ -43,7 +43,7 @@ Neve 1073/1081、BAE 1073、API 512 前級,Apogee Symphony IO / Rosetta 800 轉�
 | `nk-ride` / `nk-rideBell` | ride 鈸面 / 鈴心 | 3 / 1 × 10 |
 | `nk-crashL` / `nk-crashR` / `nk-splash` / `nk-china` | 兩片 crash、splash、china | 3 / 3 / 2 / 3 × 10 |
 
-**混音**:照原廠「Naked Drums CR」立體聲預設(近距麥克風 + overhead + close room),各麥克風音量、聲像、擊法微調全部讀自原廠 sfz 設定。
+**混音**:照原廠「Naked Drums FR」立體聲預設(近距麥克風 + overhead + close room + far rooms),各麥克風音量、聲像、擊法微調全部讀自原廠 sfz 設定;房間麥克風(close room、far rooms)另外 +6dB 增加寬度。這套是在很乾的房間錄的,殘響由 ScrollScore 播放時的鼓組混音(plate 殘響、平行壓縮)補上。
 **檔名** `nk-<鼓件>-L<力度層>.<round-robin>.flac`,力度層由輕到重;所有原始力度層與 round-robin 全部保留,
 同一層的 round-robin 響度對齊到中位數(±6dB 內)。44.1k → 48k、前導靜音裁到主要擊打瞬間前 2ms,v 最重層峰值約 0.5。
 **力度**:這套各層錄音音量相近(層代表音色),大小聲照原廠 sfz:`amp_veltrack=99`,音量 = 0.01 + 0.99 × (力度/127)²;
