@@ -27,7 +27,29 @@ ScrollScore 鼓組音色。
 所以在 300Hz 加 +6dB(Q 0.9,補上小喇叭聽得到的「咚」聲)、整體 ×1.5,再用快速限幅器把峰值壓回 0.5,
 力度層之間的差異(v3 比 v4 約 −5 LU、v5 約 +2 LU)維持不變。
 
-### ScrollScore 目前使用:DRSKit 整套鼓(`web/drs-*.flac`)
+### ScrollScore 目前使用:Naked Drums(`web/nk-*.flac` + `web/manifest.json`)
+
+取自 [Naked Drums](https://github.com/sfzinstruments/WilkinsonAudio.NakedDrums)(**Wilkinson Audio**,© 2016,**CC-BY 4.0**,sfz 版由 kinwie 整理)。
+原本是 Kontakt 商業規格的免費取樣庫:Yamaha Recording Custom(Cherry)、Remo 鼓皮、Ayotte / Pearl 小鼓、Sabian HH/AA/AAX 與 Zildjian A 銅鈸,
+Neve 1073/1081、BAE 1073、API 512 前級,Apogee Symphony IO / Rosetta 800 轉換器。
+
+| 檔名 | 擊法 | 力度層 × round-robin |
+|---|---|---|
+| `nk-kick` | 大鼓 | 5 × 10 |
+| `nk-snare` / `nk-snare2` | 兩顆小鼓(GM 38 / 40) | 5 × 10 |
+| `nk-xstick` | 邊擊 | 1 × 10 |
+| `nk-tom1`…`nk-tom5` | 10"/12"/13"/14"/16" 五顆鼓 | 3 × 10 |
+| `nk-hhPedal` / `nk-hhClosed` / `nk-hhOpen` | 踩 / 閉合 / 半開 hi-hat | 1 / 3 / 3 × 10 |
+| `nk-ride` / `nk-rideBell` | ride 鈸面 / 鈴心 | 3 / 1 × 10 |
+| `nk-crashL` / `nk-crashR` / `nk-splash` / `nk-china` | 兩片 crash、splash、china | 3 / 3 / 2 / 3 × 10 |
+
+**混音**:照原廠「Naked Drums CR」立體聲預設(近距麥克風 + overhead + close room),各麥克風音量、聲像、擊法微調全部讀自原廠 sfz 設定。
+**檔名** `nk-<鼓件>-L<力度層>.<round-robin>.flac`,力度層由輕到重;所有原始力度層與 round-robin 全部保留,
+同一層的 round-robin 響度對齊到中位數(±6dB 內)。44.1k → 48k、前導靜音裁到主要擊打瞬間前 2ms,v 最重層峰值約 0.5。
+**力度**:這套各層錄音音量相近(層代表音色),大小聲照原廠 sfz:`amp_veltrack=99`,音量 = 0.01 + 0.99 × (力度/127)²;
+力度分區 5 層 1-27/28-52/53-77/78-102/103-127、3 層 1-43/44-85/86-127、2 層 1-85/86-127。`manifest.json` 記錄每層 round-robin 數、解碼後樣本數與實測響度。
+
+### (舊版,已不使用)DRSKit 整套鼓(`web/drs-*.flac`)
 
 整組鼓全部取自同一套實錄 [DRSKit](https://github.com/sfzinstruments/DrumGizmo.DRSKit)(DrumGizmo 團隊 × DRSDrums 的 Jes Eiler,
 作者 Lars Muldjord / Bent Bisballe Nyeng,**CC-BY 4.0**):同一場錄音、同一個房間、同一組 13 支麥克風。
@@ -69,6 +91,8 @@ ScrollScore 鼓組音色。
 DW/Keplinger 各層的 round-robin 也做過響度對齊(±3dB 內),`dw-rack-roomy` 的 v5 層另外 +2.5dB(原始錄音 v5 幾乎沒有比 v4 大聲)。
 
 ## 授權
+
+- `web/nk-*`:**Naked Drums by Wilkinson Audio**,CC-BY 4.0,sfz/flac 版由 kinwie 整理
 
 - `DW Kick/`、`Keplinger Snare/`、`DW Rack/`、`DW Floor/` 及對應的 `web/dw-*`、`web/keplinger-*`:
   indiedrums「[DW Collectors Kit + Keplinger Snare](https://www.indiedrums.com/product/dw-collectors/)」免費鼓組取樣
